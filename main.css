@@ -52,7 +52,7 @@ img {
 #card {
     width: 25vw;
     /*1440px = 75 vw*/
-    height: 70vh;
+    height: 580px;
     /* 735.2px= 80vh*/
     display: flex;
     flex-direction: column;
@@ -60,15 +60,15 @@ img {
     overflow: hidden;
     column-gap: 0;
 }
-
+ /*
 #card-picture {
-    height: 25svh;
+   height: 25svh;
 }
 
 #card-picture img {
     object-fit: contain;
 }
-
+*/
 #card-content {
     background-color: #fff;
     flex: 1;
