@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'RedHatDisplay';
+    src: url('./design/RedHatDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'RedHatDisplayBold';
+    src: url('./design/static/RedHatDisplay-ExtraBold.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Allows me handle padding better*/
+    border: none;
+ 
+}
+
+body {
+    font-family: 'RedHatDisplay';
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VerypaleBlue);
+}
+
+/*Set picture tag */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+:root {
+    /*Primary*/
+
+    --Paleblue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+
+    /*Neutral*/
+
+    --VerypaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+
+}
+
+
+#card {
+    width: 25vw;
+    /*1440px = 75 vw*/
+    height: 70vh;
+    /* 735.2px= 80vh*/
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    column-gap: 0;
+}
+
+#card-picture {
+    height: 25svh;
+}
+
+#card-picture img {
+    object-fit: contain;
+}
+
+#card-content {
+    background-color: #fff;
+    flex: 1;
+    /*fill the content, combine three properties: flex-grow, flex-shrink and flex-basis*/
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+#card-title {
+    text-align: center;
+    font-weight: 800;
+    font-family: 'RedHatDisplayBold';
+}
+
+#card-text {
+    text-align: center;
+    color:var(--DesaturatedBlue);
+    padding: 1rem;
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+#card-payment-description {
+    display: grid;
+    grid-template-columns: 3rem 1fr 25%;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--VerypaleBlue);
+    width: 100%;
+    border-radius: 1rem;
+    row-gap:.1rem;
+}
+
+#card-icon {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    align-self: center;
+    /*/*/
+}
+
+#card-date-description {
+    font-family: 'RedHatDisplayBold';
+    font-size: .8rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#card-price {
+    font-size: .8rem;
+    grid-column: 2/3;
+    grid: 2/3;
+    
+}
+
+#card-change-payment {
+
+    grid-column: 3/4;
+    grid-row: 1/3;
+    display: flex;
+    align-self: center;
+    /*align the item*/
+}
+
+
+#card-btn-change {
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#card-btn-change:hover {
+    color:var(--DesaturatedBlue);
+}
+
+#card-actions {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    /*
+    justify-content: flex-end;
+    */
+    gap: 1rem;
+}
+
+#card-btn-payment {
+    width: 18svw;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--BrightBlue);
+    color: #fff;
+    box-shadow: 0 0 .25rem var(--BrightBlue);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .9rem;
+    
+}
+#card-btn-payment:hover{
+    color:var(--DesaturatedBlue);
+}
+
+#card-btn-cancel {
+    background-color: transparent;
+    color:var(--DesaturatedBlue);
+    font-weight: 800;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
